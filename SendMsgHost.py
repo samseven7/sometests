@@ -4,6 +4,7 @@ import hello
 
 
 s = socket.socket()
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 host = socket.gethostname()
 port = 9000
 s.bind((host, port))  #Attatch socket
